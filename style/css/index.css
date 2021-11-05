@@ -1,0 +1,245 @@
+body {
+    background-image: url("../media/background.jpg");
+    background-size: 100% 100%;
+    backdrop-filter: blur(5px);
+    background-repeat: no-repeat;
+}
+
+body .black-bg {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: 0.7;
+    animation: showblackbg 1s;
+}
+
+body .popup {
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    height: 90%;
+    left: 30%;
+    top: 5%;
+    overflow: hidden;
+    text-align: center;
+    background: #0F2027;
+    /* background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027); */
+    background: linear-gradient(to top, #2C5364, #fa02e5);
+    border-radius: 2rem;
+    animation: showpopup 2s;
+}
+
+body .popup .img-popup {
+    width: 100%;
+    height: 40%;
+    padding-top: 5%;
+    animation: showpopup 2.5s;
+}
+
+body .popup .img-popup img {
+    width: auto;
+    height: 100%;
+    clip-path: circle(50%);
+    transition: 0.5s;
+}
+
+body .popup .img-popup img:hover {
+    transform: scale(1.1);
+}
+
+body .popup .text-popup {
+    width: 100%;
+    height: 40%;
+    color: #fff;
+    animation: showpopup 2.5s;
+}
+
+body .popup .text-popup #title {
+    width: 100%;
+    height: 10%;
+    font-size: 50px;
+}
+
+body .popup .text-popup #content-text-popup {
+    width: 100%;
+    height: 80%;
+    margin-top: 10%;
+    font-size: larger;
+    vertical-align: middle;
+    overflow-y: scroll;
+    font-size: x-large;
+}
+
+body .popup .button-popup {
+    position: absolute;
+    width: 100%;
+}
+
+body .popup .button-popup button {
+    width: auto;
+    height: 7%;
+    padding: 2%;
+    vertical-align: middle;
+    border-radius: 20px;
+    transition: 0.5s;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+body .popup .button-popup button:hover {
+    background: #12CB76;
+    color: #fff;
+}
+
+body .content {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+body .content .title-content {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #fff;
+    font-size: 72px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+body .content .button {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: none;
+}
+
+body .content .button button {
+    position: absolute;
+    width: fit-content;
+    height: 7vh;
+    padding: 0% 3%;
+    font-size: x-large;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+body .content .button button#yes {
+    top: 25%;
+    left: 20%;
+}
+
+body .content .button button#nope {
+    top: 25%;
+    right: 20%;
+}
+
+body .content .button button#yes:hover {
+    background: crimson;
+    color: #fff;
+    opacity: 1;
+}
+
+body .say-yes {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+body .say-yes .question {
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    left: 10%;
+    top: 35%;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+body .say-yes .question #title {
+    width: 100%;
+    height: 20%;
+    font-size: 45px;
+    text-indent: 3%;
+    padding-bottom: 2%;
+    text-align: left;
+}
+
+body .say-yes .question #content-question {
+    width: 100%;
+    height: 20%;
+    font-size: x-large;
+    text-indent: 5%;
+    text-align: left;
+}
+
+body .say-yes .question input {
+    width: 100%;
+    height: 20%;
+    font-size: xx-large;
+    letter-spacing: 5px;
+    text-indent: 3%;
+    border-radius: 1rem;
+}
+
+body .say-yes .question button {
+    width: fit-content;
+    height: 20%;
+    margin-top: 1%;
+    padding: 0% 2%;
+    transition: 0.5s;
+    font-weight: 700;
+    font-size: x-large;
+    border-radius: 5px;
+}
+
+body .say-yes .question button:hover {
+    background: crimson;
+    color: #fff;
+}
+
+body .say-yes .question #text-hidden {
+    display: none;
+}
+
+body .say-yes .end {
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    left: 10%;
+    top: 35%;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    text-align: center;
+}
+
+body .say-yes .end p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    font-size: x-large;
+    text-indent: 5%;
+    text-align: left;
+}
